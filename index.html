@@ -1,52 +1,103 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CyberParm | Cybersecurity Portfolio</title>
+  <title>CyberParm Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const theme = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", theme === "dark" ? "light" : "dark");
+    }
+
+    function typeEffect(element, speed) {
+      const text = element.innerText;
+      element.innerText = "";
+      let i = 0;
+      const timer = setInterval(() => {
+        if (i < text.length) {
+          element.innerText += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(timer);
+        }
+      }, speed);
+    }
+
+    window.onload = function() {
+      const heading = document.getElementById("intro-text");
+      typeEffect(heading, 70);
+    }
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Paramvir 👋</h1>
-    <p>Cybersecurity Enthusiast | CCNA Certified | QA-to-Cyber Transitioner</p>
-  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#certs">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+    <button onclick="toggleDarkMode()">🌙</button>
+  </nav>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I'm transitioning into cybersecurity with a background in QA and automation. I specialize in network scanning, vulnerability assessment, and hands-on labs through platforms like TryHackMe and Hack The Box.
-    </p>
+  <section id="about">
+    <h2 id="intro-text">Hi, I'm Paramvir - Cybersecurity Enthusiast</h2>
+    <p>I'm transitioning into cybersecurity with a background in QA and automation. I specialize in network scanning, vulnerability assessment, and hands-on labs through platforms like TryHackMe and Hack The Box.</p>
   </section>
 
-  <section>
+  <section id="certs">
     <h2>Certifications</h2>
     <ul>
       <li>CCNA Routing & Switching</li>
-      <li>CCNA Service Provider Operations</li>
+      <li>CCNA Service Provider Ops</li>
       <li>CompTIA A+</li>
     </ul>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Featured Projects</h2>
-    <ul>
-      <li><a href="https://github.com/cyberparm/tryhackme-writeups" target="_blank">TryHackMe Writeups</a></li>
-      <li><a href="https://github.com/cyberparm/nmap-scan-scripts" target="_blank">Nmap Scan Scripts</a></li>
-      <li><a href="https://github.com/cyberparm/kali-notes" target="_blank">Kali Linux Notes</a></li>
-      <li><a href="https://github.com/cyberparm/pentest-reports" target="_blank">Penetration Test Reports</a></li>
-    </ul>
+    <div class="card-container">
+      <div class="project-card">
+        <h3>TryHackMe Writeups</h3>
+        <p>Walkthroughs from THM rooms: recon, exploitation, privilege escalation.</p>
+        <a href="https://github.com/cyberparm/tryhackme-writeups" target="_blank">View Repo</a>
+      </div>
+      <div class="project-card">
+        <h3>Nmap Scan Scripts</h3>
+        <p>Sample Nmap commands and automation examples for recon.</p>
+        <a href="https://github.com/cyberparm/nmap-scan-scripts" target="_blank">View Repo</a>
+      </div>
+      <div class="project-card">
+        <h3>Kali Linux Notes</h3>
+        <p>Cheatsheets and CLI guides for tools like Burp, sqlmap, Hydra.</p>
+        <a href="https://github.com/cyberparm/kali-notes" target="_blank">View Repo</a>
+      </div>
+      <div class="project-card">
+        <h3>Pentest Reports</h3>
+        <p>Template reports for web app and system penetration testing.</p>
+        <a href="https://github.com/cyberparm/pentest-reports" target="_blank">View Repo</a>
+      </div>
+    </div>
   </section>
 
-  <section>
+  <section id="resume">
     <h2>Resume</h2>
-    <p><a href="assets/resume.pdf" target="_blank">Download My Resume</a></p>
+    <p><a href="assets/resume.pdf" target="_blank">Download Resume</a></p>
   </section>
 
-  <section>
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:paramvirponia@hotmail.com">paramvirponia@hotmail.com</a></p>
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="mailto:paramvirponia@hotmail.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required><br />
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required><br />
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="5" required></textarea><br />
+      <input type="submit" value="Send Message">
+    </form>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/paramvir-poonia" target="_blank">Paramvir Poonia</a></p>
   </section>
 
