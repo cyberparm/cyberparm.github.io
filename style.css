@@ -27,6 +27,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .brand {
   font-size: 1.5rem;
@@ -137,3 +138,48 @@ body {
 .footer .social-icons a:hover {
   color: #007BFF;
 }
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+.theme-switch input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.theme-switch label {
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.theme-switch label::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.theme-switch input:checked + label {
+  background: #4fbe79;
+}
+
+.theme-switch input:checked + label::after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
