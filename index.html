@@ -1,13 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CyberParm | Cybersecurity Portfolio</title>
-  <!-- ... truncated for brevity ... -->
+  <meta name="description" content="CyberParm is the personal cybersecurity portfolio of Paramvir Poonia. Showcasing penetration testing, ethical hacking projects, and certifications.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cyberparm.github.io/">
+  <meta property="og:title" content="CyberParm | Cybersecurity Portfolio">
+  <meta property="og:description" content="CyberParm is the personal cybersecurity portfolio of Paramvir Poonia. Showcasing penetration testing, ethical hacking projects, and certifications.">
+  <meta property="og:image" content="https://cyberparm.github.io/assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://cyberparm.github.io/">
+  <meta property="twitter:title" content="CyberParm | Cybersecurity Portfolio">
+  <meta property="twitter:description" content="CyberParm is the personal cybersecurity portfolio of Paramvir Poonia. Showcasing penetration testing, ethical hacking projects, and certifications.">
+  <meta property="twitter:image" content="https://cyberparm.github.io/assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Placeholder -->
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="brand">CyberParm</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#certs">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="theme-switch">
+        <input type="checkbox" id="switch" />
+        <label for="switch">Toggle Dark Mode</label>
+      </div>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero focusly-hero">
+    <div class="container">
+      <h1 class="hero-title">Hi, I'm Paramvir</h1>
+      <p class="hero-subtitle">Cybersecurity Enthusiast • Penetration Tester • CCNA Certified</p>
+      <a href="#projects" class="hero-cta">Explore My Work</a>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm transitioning into cybersecurity with a background in QA and automation. I specialize in network scanning, vulnerability assessment, and hands-on labs through platforms like TryHackMe and Hack The Box.</p>
+    </div>
+  </section>
+
+  <section id="certs" class="section bg-light">
+    <div class="container">
+      <h2>Certifications</h2>
+      <ul class="cert-list">
+        <li>CCNA Routing & Switching</li>
+        <li>CCNA Service Provider Ops</li>
+        <li>CompTIA A+</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="grid project-grid">
+        <div class="card">
+          <h3>TryHackMe Writeups</h3>
+          <p>Walkthroughs from THM rooms: recon, exploitation, privilege escalation.</p>
+          <a href="https://github.com/cyberparm/tryhackme-writeups" target="_blank">View Repo →</a>
+        </div>
+        <div class="card">
+          <h3>Nmap Scan Scripts</h3>
+          <p>Sample Nmap commands and automation examples for recon.</p>
+          <a href="https://github.com/cyberparm/nmap-scan-scripts" target="_blank">View Repo →</a>
+        </div>
+        <div class="card">
+          <h3>Kali Linux Notes</h3>
+          <p>Cheatsheets and CLI guides for tools like Burp, sqlmap, Hydra.</p>
+          <a href="https://github.com/cyberparm/kali-notes" target="_blank">View Repo →</a>
+        </div>
+        <div class="card">
+          <h3>Pentest Reports</h3>
+          <p>Template reports for web app and system penetration testing.</p>
+          <a href="https://github.com/cyberparm/pentest-reports" target="_blank">View Repo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section bg-light">
+    <div class="container">
+      <h2>Resume</h2>
+      <p><a href="assets/resume.pdf" target="_blank" class="btn">Download My Resume</a></p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <form action="mailto:paramvirponia@hotmail.com" method="post" enctype="text/plain" class="form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/paramvir-poonia" target="_blank">Paramvir Poonia</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Paramvir Poonia • Built with ❤️ on GitHub Pages</p>
+      <div class="social-icons">
+        <a href="https://github.com/cyberparm" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/paramvir-poonia" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- The script and styles remain as per previous working version -->
 </body>
 </html>
+
