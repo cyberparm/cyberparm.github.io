@@ -24,182 +24,145 @@
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-flex">
-      <div class="brand">CyberParm</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#certs">Certifications</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-flex">
+    <div class="brand">CyberParm</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#certs">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="theme-switch">
+      <input type="checkbox" id="switch" />
+      <label for="switch">Dark Mode</label>
+    </div>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero focusly-hero" id="hero">
+  <div class="container" data-aos="fade-up">
+    <h1 class="hero-title">Hi, I'm Paramvir</h1>
+    <p class="hero-subtitle">Cybersecurity Enthusiast • Penetration Tester • CCNA Certified</p>
+    <a href="#projects" class="hero-cta">Explore My Work</a>
+  </div>
+</header>
+
+<!-- SVG Divider -->
+<svg viewBox="0 0 1440 320" class="section-divider">
+  <path fill="#f9fafb" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,112C384,107,480,117,576,133.3C672,149,768,171,864,181.3C960,192,1056,192,1152,170.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+</svg>
+
+<!-- About Section -->
+<section id="about" class="section bg-light" data-aos="fade-up">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>I'm transitioning into cybersecurity with a background in QA and automation. I specialize in network scanning, vulnerability assessment, and hands-on labs through platforms like TryHackMe and Hack The Box.</p>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certs" class="section" data-aos="fade-up">
+  <div class="container">
+    <h2>Certifications</h2>
+    <div class="grid project-grid">
+      <div class="card">CCNA Routing & Switching</div>
+      <div class="card">CCNA Service Provider Ops</div>
+      <div class="card">CompTIA A+</div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section bg-light" data-aos="fade-up">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <div class="grid project-grid">
+      <div class="card">
+        <h3>TryHackMe Writeups</h3>
+        <p>Walkthroughs from THM rooms: recon, exploitation, privilege escalation.</p>
+        <a href="https://github.com/cyberparm/tryhackme-writeups" target="_blank">View Repo →</a>
       </div>
-      <div class="theme-switch">
-        <input type="checkbox" id="switch" />
-        <label for="switch">Toggle Dark Mode</label>
+      <div class="card">
+        <h3>Nmap Scan Scripts</h3>
+        <p>Sample Nmap commands and automation examples for recon.</p>
+        <a href="https://github.com/cyberparm/nmap-scan-scripts" target="_blank">View Repo →</a>
       </div>
-      <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="card">
+        <h3>Kali Linux Notes</h3>
+        <p>Cheatsheets and CLI guides for tools like Burp, sqlmap, Hydra.</p>
+        <a href="https://github.com/cyberparm/kali-notes" target="_blank">View Repo →</a>
       </div>
-    </div>
-  </nav>
-
-  <header class="hero focusly-hero">
-    <div class="container">
-      <h1 class="hero-title">Hi, I'm Paramvir</h1>
-      <p class="hero-subtitle">Cybersecurity Enthusiast • Penetration Tester • CCNA Certified</p>
-      <a href="#projects" class="hero-cta">Explore My Work</a>
-    </div>
-  </header>
-
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I'm transitioning into cybersecurity with a background in QA and automation. I specialize in network scanning, vulnerability assessment, and hands-on labs through platforms like TryHackMe and Hack The Box.</p>
-    </div>
-  </section>
-
-  <section id="certs" class="section bg-light">
-    <div class="container">
-      <h2>Certifications</h2>
-      <ul class="cert-list">
-        <li>CCNA Routing & Switching</li>
-        <li>CCNA Service Provider Ops</li>
-        <li>CompTIA A+</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Featured Projects</h2>
-      <div class="grid project-grid">
-        <div class="card">
-          <h3>TryHackMe Writeups</h3>
-          <p>Walkthroughs from THM rooms: recon, exploitation, privilege escalation.</p>
-          <a href="https://github.com/cyberparm/tryhackme-writeups" target="_blank">View Repo →</a>
-        </div>
-        <div class="card">
-          <h3>Nmap Scan Scripts</h3>
-          <p>Sample Nmap commands and automation examples for recon.</p>
-          <a href="https://github.com/cyberparm/nmap-scan-scripts" target="_blank">View Repo →</a>
-        </div>
-        <div class="card">
-          <h3>Kali Linux Notes</h3>
-          <p>Cheatsheets and CLI guides for tools like Burp, sqlmap, Hydra.</p>
-          <a href="https://github.com/cyberparm/kali-notes" target="_blank">View Repo →</a>
-        </div>
-        <div class="card">
-          <h3>Pentest Reports</h3>
-          <p>Template reports for web app and system penetration testing.</p>
-          <a href="https://github.com/cyberparm/pentest-reports" target="_blank">View Repo →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="resume" class="section bg-light">
-    <div class="container">
-      <h2>Resume</h2>
-      <p><a href="assets/resume.pdf" target="_blank" class="btn">Download My Resume</a></p>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <form action="mailto:paramvirponia@hotmail.com" method="post" enctype="text/plain" class="form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <input type="submit" value="Send Message" class="btn">
-      </form>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/paramvir-poonia" target="_blank">Paramvir Poonia</a></p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Paramvir Poonia • Built with ❤️ on GitHub Pages</p>
-      <div class="social-icons">
-        <a href="https://github.com/cyberparm" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/paramvir-poonia" target="_blank">LinkedIn</a>
+      <div class="card">
+        <h3>Pentest Reports</h3>
+        <p>Template reports for web app and system penetration testing.</p>
+        <a href="https://github.com/cyberparm/pentest-reports" target="_blank">View Repo →</a>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
+<!-- Resume Section -->
+<section id="resume" class="section" data-aos="fade-up">
+  <div class="container">
+    <h2>Resume</h2>
+    <p><a href="assets/resume.pdf" target="_blank" class="btn">Download My Resume</a></p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section bg-light" data-aos="fade-up">
+  <div class="container">
+    <h2>Contact</h2>
+    <form action="mailto:paramvirponia@hotmail.com" method="post" enctype="text/plain" class="form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </form>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/paramvir-poonia" target="_blank">Paramvir Poonia</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" data-aos="fade-up">
+  <div class="container">
+    <h2>Let's Work Together!</h2>
+    <p>I'm available for freelance pentesting, consulting, and collaborative projects.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+    <div class="social-icons">
+      <a href="https://github.com/cyberparm" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/paramvir-poonia" target="_blank">LinkedIn</a>
+    </div>
+    <p>© 2025 Paramvir Poonia • Built with ❤️ on GitHub Pages</p>
+  </div>
+</footer>
+
+<!-- Back to Top + Floating Contact + AOS + Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+  AOS.init();
+
   document.addEventListener("DOMContentLoaded", function() {
-    // Smooth scroll for nav links
-    const navLinks = document.querySelectorAll(".nav-links a");
-    if (navLinks) {
-      navLinks.forEach(link => {
-        link.addEventListener("click", function(e) {
-          e.preventDefault();
-          const section = document.querySelector(this.getAttribute("href"));
-          if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      });
-    }
-  
-    // Dark mode toggle
     const toggleSwitch = document.querySelector(".theme-switch input[type='checkbox']");
     if (toggleSwitch) {
       toggleSwitch.addEventListener("change", () => {
         document.body.classList.toggle("dark");
       });
     }
-  
-    // Back to top button
-    const backToTop = document.createElement('button');
-    backToTop.innerHTML = '↑';
-    backToTop.className = 'back-to-top';
-    document.body.appendChild(backToTop);
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  
-    // Floating Contact button
-    const contactButton = document.createElement('a');
-    contactButton.href = "#contact";
-    contactButton.className = 'contact-button';
-    contactButton.innerHTML = 'Contact Me';
-    document.body.appendChild(contactButton);
-  
-    // Hero fade-in
-    const heroTitle = document.querySelector(".hero-title");
-    const heroSubtitle = document.querySelector(".hero-subtitle");
-    if (heroTitle && heroSubtitle) {
-      heroTitle.classList.add("fade-in-top");
-      setTimeout(() => {
-        heroSubtitle.classList.add("fade-in-top");
-      }, 400);
-    }
-  
-    // Footer fade-in
-    const footer = document.querySelector("footer");
-    if (footer) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            footer.classList.add("fade-in");
-            observer.unobserve(footer);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-  
-      observer.observe(footer);
-    }
-  
-    // Hamburger menu toggle
+
     const hamburger = document.querySelector(".hamburger");
     const navLinksContainer = document.querySelector(".nav-links");
     if (hamburger && navLinksContainer) {
@@ -208,56 +171,30 @@
         hamburger.classList.toggle("open");
       });
     }
-  
-    // Scroll listener for sticky navbar and active link
+
+    const backToTop = document.createElement('button');
+    backToTop.innerHTML = '↑';
+    backToTop.className = 'back-to-top';
+    document.body.appendChild(backToTop);
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     window.addEventListener('scroll', () => {
-      // Sticky navbar
-      const navbar = document.querySelector('.navbar');
-      if (navbar) {
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      }
-  
-      // Back to top visibility
       if (window.scrollY > 300) {
         backToTop.style.display = 'block';
       } else {
         backToTop.style.display = 'none';
       }
-  
-      // Fade-in sections
-      document.querySelectorAll('section').forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          section.classList.add('fade-in');
-        }
-      });
-  
-      // Active nav link
-      const sections = document.querySelectorAll('section');
-      const navItems = document.querySelectorAll('.nav-links a');
-      let current = '';
-  
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (window.scrollY >= sectionTop - 60) {
-          current = section.getAttribute('id');
-        }
-      });
-  
-      navItems.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
     });
+
+    const contactButton = document.createElement('a');
+    contactButton.href = "#contact";
+    contactButton.className = 'contact-button';
+    contactButton.innerHTML = 'Contact Me';
+    document.body.appendChild(contactButton);
   });
 </script>
 
 </body>
 </html>
-
